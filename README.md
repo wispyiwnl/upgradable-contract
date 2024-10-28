@@ -1,29 +1,66 @@
-# upgradable-contract
+## Foundry
 
-This repository is for demonstrate two things
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-* How delegatecall, call can be done in Solidity
-* How upgradable smart contract architecture can be done
+Foundry consists of:
 
-## DelegateCall
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-### Setup
-1. checkout branch to `feat/delegatecall`
-2. install truffle
-    ```bash
-    npm i -g truffle
-    ```
-3. install node module dependency
-    ```bash
-    npm install
-    ```
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
+```
 
 ### Test
 
-```bash
-npm run test
-``` 
+```shell
+$ forge test
+```
 
-## Upgradable Smart Contract
+### Format
 
-**WIP**
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
